@@ -9,15 +9,12 @@
  * to the application root now.
  */
 chdir(dirname(__DIR__));
-//die(var_dump(file_exists('vendor/autoload.php')));
+
 // Decline static file requests back to the PHP built-in webserver
 if (php_sapi_name() === 'cli-server' && is_file(__DIR__ . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH))) {
     return false;
 }
-//die('a'.var_dump(file_exists('vendor/autoload.php')));
-//die(var_dump(dirname(__DIR__)));
-//die(var_dump(__DIR__));
-//die(var_dump(file_exists('../vendor/autoload.php')));
+
 if (!file_exists('vendor/autoload.php')) {
     throw new RuntimeException(
         'Unable to load ZF2. Run `php composer.phar install` or define a ZF2_PATH environment variable.'
