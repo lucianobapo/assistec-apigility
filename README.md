@@ -5,6 +5,8 @@ php public/index.php development enable
 php -S 0.0.0.0:8888 -ddisplay_errors=0 -t public public/index.php
 rsync -rvztPhe "ssh -p 9922 -oHostKeyAlgorithms=+ssh-dss" vendor/ guiaassistenciatecnica.com@guiaassistenciatecnica-com.umbler.net:vendor
 rsync -rvztPhe "ssh -p 9922 -oHostKeyAlgorithms=+ssh-dss" config/autoload/production.php guiaassistenciatecnica.com@guiaassistenciatecnica-com.umbler.net:config/autoload/production.php
+rsync -rvztPhe "ssh -p 9922 -oHostKeyAlgorithms=+ssh-dss" config/autoload/local.php guiaassistenciatecnica.com@guiaassistenciatecnica-com.umbler.net:config/autoload/local.php
+rsync -rvztPhe "ssh -p 9922 -oHostKeyAlgorithms=+ssh-dss" config/development.config.php guiaassistenciatecnica.com@guiaassistenciatecnica-com.umbler.net:config/development.config.php
 ssh -oHostKeyAlgorithms=+ssh-dss guiaassistenciatecnica.com@guiaassistenciatecnica-com.umbler.net -p 9922
 
 Requirements
