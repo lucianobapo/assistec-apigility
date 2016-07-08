@@ -9,6 +9,11 @@ rsync -rvztPhe "ssh -p 9922 -oHostKeyAlgorithms=+ssh-dss" config/autoload/local.
 rsync -rvztPhe "ssh -p 9922 -oHostKeyAlgorithms=+ssh-dss" config/development.config.php guiaassistenciatecnica.com@guiaassistenciatecnica-com.umbler.net:config/development.config.php
 ssh -oHostKeyAlgorithms=+ssh-dss guiaassistenciatecnica.com@guiaassistenciatecnica-com.umbler.net -p 9922
 
+ssh luciano_bapo@104.154.232.6
+rsync -rvztPhe ssh config/autoload/production.php luciano_bapo@assistec.ilhanet.com:code/assistec-apigility/config/autoload/production.php
+rsync -rvztPhe ssh config/development.config.php luciano_bapo@assistec.ilhanet.com:code/assistec-apigility/config/development.config.php
+rsync -rvztPhe ssh config/autoload/local.php luciano_bapo@assistec.ilhanet.com:code/assistec-apigility/config/autoload/local.php
+
 Requirements
 ------------
 
