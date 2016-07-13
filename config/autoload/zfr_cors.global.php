@@ -16,8 +16,8 @@ return array(
          /**
           * Set the list of HTTP verbs.
           */
-         // 'allowed_methods' => array('GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'),
-          'allowed_methods' => array('GET'),
+          'allowed_methods' => array('GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'),
+//          'allowed_methods' => array('GET'),
 
          /**
           * Set the list of headers. This is returned in the preflight request to indicate
