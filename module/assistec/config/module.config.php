@@ -159,72 +159,6 @@ return array(
             'collection_class' => 'assistec\\V2\\Rest\\Servico\\ServicoCollection',
             'service_name' => 'servico',
         ),
-        'assistec\\V2\\Rest\\Cidade\\Controller' => array(
-            'listener' => 'assistec\\V2\\Rest\\Cidade\\CidadeResource',
-            'route_name' => 'assistec.rest.cidade',
-            'route_identifier_name' => 'cidade_id',
-            'collection_name' => 'cidade',
-            'entity_http_methods' => array(
-                0 => 'GET',
-                1 => 'PATCH',
-                2 => 'PUT',
-                3 => 'DELETE',
-            ),
-            'collection_http_methods' => array(
-                0 => 'GET',
-                1 => 'POST',
-            ),
-            'collection_query_whitelist' => array(),
-            'page_size' => '25',
-            'page_size_param' => '',
-            'entity_class' => 'assistec\\V2\\Rest\\Cidade\\CidadeEntity',
-            'collection_class' => 'assistec\\V2\\Rest\\Cidade\\CidadeCollection',
-            'service_name' => 'cidade',
-        ),
-        'assistec\\V2\\Rest\\Status\\Controller' => array(
-            'listener' => 'assistec\\V2\\Rest\\Status\\StatusResource',
-            'route_name' => 'assistec.rest.status',
-            'route_identifier_name' => 'status_id',
-            'collection_name' => 'status',
-            'entity_http_methods' => array(
-                0 => 'GET',
-                1 => 'PATCH',
-                2 => 'PUT',
-                3 => 'DELETE',
-            ),
-            'collection_http_methods' => array(
-                0 => 'GET',
-                1 => 'POST',
-            ),
-            'collection_query_whitelist' => array(),
-            'page_size' => '25',
-            'page_size_param' => '',
-            'entity_class' => 'StatusLib\\Entity',
-            'collection_class' => 'StatusLib\\Collection',
-            'service_name' => 'Status',
-        ),
-        'assistec\\V2\\Rest\\Estado\\Controller' => array(
-            'listener' => 'assistec\\V2\\Rest\\Estado\\EstadoResource',
-            'route_name' => 'assistec.rest.estado',
-            'route_identifier_name' => 'estado_id',
-            'collection_name' => 'estado',
-            'entity_http_methods' => array(
-                0 => 'GET',
-                1 => 'PATCH',
-                2 => 'PUT',
-                3 => 'DELETE',
-            ),
-            'collection_http_methods' => array(
-                0 => 'GET',
-                1 => 'POST',
-            ),
-            'collection_query_whitelist' => array(),
-            'page_size' => 25,
-            'page_size_param' => null,
-            'entity_class' => 'assistec\\V2\\Rest\\Estado\\EstadoEntity',
-            'collection_class' => 'assistec\\V2\\Rest\\Estado\\EstadoCollection',
-            'service_name' => 'estado',
-        ),
         'assistec\\V2\\Rest\\Fabricante\\Controller' => array(
             'listener' => 'assistec\\V2\\Rest\\Fabricante\\FabricanteResource',
             'route_name' => 'assistec.rest.fabricante',
@@ -255,10 +189,7 @@ return array(
             'assistec\\V1\\Rpc\\Ping\\Controller' => 'Json',
             'assistec\\V1\\Rest\\Status\\Controller' => 'HalJson',
             'assistec\\V2\\Rest\\Servico\\Controller' => 'HalJson',
-            'assistec\\V2\\Rest\\Cidade\\Controller' => 'HalJson',
             'assistec\\V2\\Rpc\\Ping\\Controller' => 'Json',
-            'assistec\\V2\\Rest\\Status\\Controller' => 'HalJson',
-            'assistec\\V2\\Rest\\Estado\\Controller' => 'HalJson',
             'assistec\\V2\\Rest\\Fabricante\\Controller' => 'HalJson',
         ),
         'accept_whitelist' => array(
@@ -287,25 +218,10 @@ return array(
                 1 => 'application/hal+json',
                 2 => 'application/json',
             ),
-            'assistec\\V2\\Rest\\Cidade\\Controller' => array(
-                0 => 'application/vnd.assistec.v2+json',
-                1 => 'application/hal+json',
-                2 => 'application/json',
-            ),
             'assistec\\V2\\Rpc\\Ping\\Controller' => array(
                 0 => 'application/vnd.assistec.v2+json',
                 1 => 'application/json',
                 2 => 'application/*+json',
-            ),
-            'assistec\\V2\\Rest\\Status\\Controller' => array(
-                0 => 'application/vnd.assistec.v2+json',
-                1 => 'application/hal+json',
-                2 => 'application/json',
-            ),
-            'assistec\\V2\\Rest\\Estado\\Controller' => array(
-                0 => 'application/vnd.assistec.v2+json',
-                1 => 'application/hal+json',
-                2 => 'application/json',
             ),
             'assistec\\V2\\Rest\\Fabricante\\Controller' => array(
                 0 => 'application/vnd.assistec.v2+json',
@@ -334,19 +250,7 @@ return array(
                 0 => 'application/vnd.assistec.v2+json',
                 1 => 'application/json',
             ),
-            'assistec\\V2\\Rest\\Cidade\\Controller' => array(
-                0 => 'application/vnd.assistec.v2+json',
-                1 => 'application/json',
-            ),
             'assistec\\V2\\Rpc\\Ping\\Controller' => array(
-                0 => 'application/vnd.assistec.v2+json',
-                1 => 'application/json',
-            ),
-            'assistec\\V2\\Rest\\Status\\Controller' => array(
-                0 => 'application/vnd.assistec.v2+json',
-                1 => 'application/json',
-            ),
-            'assistec\\V2\\Rest\\Estado\\Controller' => array(
                 0 => 'application/vnd.assistec.v2+json',
                 1 => 'application/json',
             ),
@@ -394,18 +298,6 @@ return array(
                 'route_identifier_name' => 'status_id',
                 'is_collection' => true,
             ),
-            'StatusLib\\Entity' => array(
-                'entity_identifier_name' => 'id',
-                'route_name' => 'assistec.rest.status',
-                'route_identifier_name' => 'status_id',
-                'hydrator' => 'Zend\\Hydrator\\ObjectProperty',
-            ),
-            'StatusLib\\Collection' => array(
-                'entity_identifier_name' => 'id',
-                'route_name' => 'assistec.rest.status',
-                'route_identifier_name' => 'status_id',
-                'is_collection' => '1',
-            ),
             'assistec\\V2\\Rest\\Servico\\ServicoEntity' => array(
                 'entity_identifier_name' => 'id',
                 'route_name' => 'assistec.rest.servico',
@@ -416,18 +308,6 @@ return array(
                 'entity_identifier_name' => 'id',
                 'route_name' => 'assistec.rest.servico',
                 'route_identifier_name' => 'servico_id',
-                'is_collection' => '1',
-            ),
-            'assistec\\V2\\Rest\\Cidade\\CidadeEntity' => array(
-                'entity_identifier_name' => 'id',
-                'route_name' => 'assistec.rest.cidade',
-                'route_identifier_name' => 'cidade_id',
-                'hydrator' => 'Zend\\Hydrator\\ArraySerializable',
-            ),
-            'assistec\\V2\\Rest\\Cidade\\CidadeCollection' => array(
-                'entity_identifier_name' => 'id',
-                'route_name' => 'assistec.rest.cidade',
-                'route_identifier_name' => 'cidade_id',
                 'is_collection' => '1',
             ),
             'assistec\\V2\\Rest\\Status\\StatusEntity' => array(
@@ -441,18 +321,6 @@ return array(
                 'route_name' => 'assistec.rest.status',
                 'route_identifier_name' => 'status_id',
                 'is_collection' => '1',
-            ),
-            'assistec\\V2\\Rest\\Estado\\EstadoEntity' => array(
-                'entity_identifier_name' => 'id',
-                'route_name' => 'assistec.rest.estado',
-                'route_identifier_name' => 'estado_id',
-                'hydrator' => 'Zend\\Hydrator\\ArraySerializable',
-            ),
-            'assistec\\V2\\Rest\\Estado\\EstadoCollection' => array(
-                'entity_identifier_name' => 'id',
-                'route_name' => 'assistec.rest.estado',
-                'route_identifier_name' => 'estado_id',
-                'is_collection' => true,
             ),
             'assistec\\V2\\Rest\\Fabricante\\FabricanteEntity' => array(
                 'entity_identifier_name' => 'id',
@@ -491,20 +359,6 @@ return array(
                 'controller_service_name' => 'assistec\\V2\\Rest\\Servico\\Controller',
                 'entity_identifier_name' => 'id',
             ),
-            'assistec\\V2\\Rest\\Cidade\\CidadeResource' => array(
-                'adapter_name' => 'assistec-backend',
-                'table_name' => 'cidade',
-                'hydrator_name' => 'Zend\\Hydrator\\ArraySerializable',
-                'controller_service_name' => 'assistec\\V2\\Rest\\Cidade\\Controller',
-                'entity_identifier_name' => 'id',
-            ),
-            'assistec\\V2\\Rest\\Estado\\EstadoResource' => array(
-                'adapter_name' => 'assistec-backend',
-                'table_name' => 'estado',
-                'hydrator_name' => 'Zend\\Hydrator\\ArraySerializable',
-                'controller_service_name' => 'assistec\\V2\\Rest\\Estado\\Controller',
-                'entity_identifier_name' => 'id',
-            ),
             'assistec\\V2\\Rest\\Fabricante\\FabricanteResource' => array(
                 'adapter_name' => 'assistec-backend',
                 'table_name' => 'fabricante',
@@ -530,17 +384,8 @@ return array(
         'assistec\\V2\\Rest\\Servico\\Controller' => array(
             'input_filter' => 'assistec\\V2\\Rest\\Servico\\Validator',
         ),
-        'assistec\\V2\\Rest\\Cidade\\Controller' => array(
-            'input_filter' => 'assistec\\V2\\Rest\\Cidade\\Validator',
-        ),
         'assistec\\V2\\Rpc\\Ping\\Controller' => array(
             'input_filter' => 'assistec\\V2\\Rpc\\Ping\\Validator',
-        ),
-        'assistec\\V2\\Rest\\Status\\Controller' => array(
-            'input_filter' => 'assistec\\V2\\Rest\\Status\\Validator',
-        ),
-        'assistec\\V2\\Rest\\Estado\\Controller' => array(
-            'input_filter' => 'assistec\\V2\\Rest\\Estado\\Validator',
         ),
         'assistec\\V2\\Rest\\Fabricante\\Controller' => array(
             'input_filter' => 'assistec\\V2\\Rest\\Fabricante\\Validator',
@@ -927,19 +772,6 @@ return array(
                 ),
             ),
             2 => array(
-                'name' => 'cidade_id',
-                'required' => '1',
-                'filters' => array(
-                    0 => array(
-                        'name' => 'Zend\\Filter\\StripTags',
-                    ),
-                    1 => array(
-                        'name' => 'Zend\\Filter\\Digits',
-                    ),
-                ),
-                'validators' => array(),
-            ),
-            3 => array(
                 'name' => 'bairro',
                 'required' => '',
                 'filters' => array(
@@ -960,7 +792,7 @@ return array(
                     ),
                 ),
             ),
-            4 => array(
+            3 => array(
                 'name' => 'endereco',
                 'required' => '',
                 'filters' => array(
@@ -981,7 +813,7 @@ return array(
                     ),
                 ),
             ),
-            5 => array(
+            4 => array(
                 'name' => 'complemento',
                 'required' => '',
                 'filters' => array(
@@ -1002,7 +834,7 @@ return array(
                     ),
                 ),
             ),
-            6 => array(
+            5 => array(
                 'name' => 'cep',
                 'required' => '',
                 'filters' => array(
@@ -1023,7 +855,7 @@ return array(
                     ),
                 ),
             ),
-            7 => array(
+            6 => array(
                 'name' => 'telefone',
                 'required' => '',
                 'filters' => array(
@@ -1044,7 +876,7 @@ return array(
                     ),
                 ),
             ),
-            8 => array(
+            7 => array(
                 'name' => 'email',
                 'required' => '',
                 'filters' => array(
@@ -1065,7 +897,7 @@ return array(
                     ),
                 ),
             ),
-            9 => array(
+            8 => array(
                 'name' => 'site',
                 'required' => '',
                 'filters' => array(
@@ -1086,7 +918,7 @@ return array(
                     ),
                 ),
             ),
-            10 => array(
+            9 => array(
                 'name' => 'fabricantes',
                 'required' => '',
                 'filters' => array(
@@ -1106,6 +938,50 @@ return array(
                         ),
                     ),
                 ),
+            ),
+            10 => array(
+                'required' => false,
+                'validators' => array(
+                    0 => array(
+                        'name' => 'Zend\\Validator\\StringLength',
+                        'options' => array(
+                            'max' => '128',
+                            'min' => '1',
+                        ),
+                    ),
+                ),
+                'filters' => array(
+                    0 => array(
+                        'name' => 'Zend\\Filter\\StringTrim',
+                    ),
+                    1 => array(
+                        'name' => 'Zend\\Filter\\StripTags',
+                    ),
+                ),
+                'name' => 'cidade',
+                'allow_empty' => false,
+                'continue_if_empty' => false,
+            ),
+            11 => array(
+                'required' => false,
+                'validators' => array(
+                    0 => array(
+                        'name' => 'Zend\\Validator\\StringLength',
+                        'options' => array(
+                            'max' => '128',
+                            'min' => '1',
+                        ),
+                    ),
+                ),
+                'filters' => array(
+                    0 => array(
+                        'name' => 'Zend\\Filter\\StringTrim',
+                    ),
+                    1 => array(
+                        'name' => 'Zend\\Filter\\StripTags',
+                    ),
+                ),
+                'name' => 'estado',
             ),
         ),
         'assistec\\V2\\Rest\\Cidade\\Validator' => array(
@@ -1375,7 +1251,6 @@ return array(
     'service_manager' => array(
         'factories' => array(
             'assistec\\V1\\Rest\\Status\\StatusResource' => 'assistec\\V1\\Rest\\Status\\StatusResourceFactory',
-            'assistec\\V2\\Rest\\Status\\StatusResource' => 'assistec\\V2\\Rest\\Status\\StatusResourceFactory',
         ),
     ),
     'zf-mvc-auth' => array(
@@ -1394,22 +1269,6 @@ return array(
                     'PUT' => true,
                     'PATCH' => true,
                     'DELETE' => true,
-                ),
-            ),
-            'assistec\\V2\\Rest\\Status\\Controller' => array(
-                'collection' => array(
-                    'GET' => '',
-                    'POST' => '1',
-                    'PUT' => '',
-                    'PATCH' => '',
-                    'DELETE' => '',
-                ),
-                'entity' => array(
-                    'GET' => '',
-                    'POST' => '',
-                    'PUT' => '1',
-                    'PATCH' => '1',
-                    'DELETE' => '1',
                 ),
             ),
         ),
