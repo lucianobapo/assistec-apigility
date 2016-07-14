@@ -983,6 +983,12 @@ return array(
                 ),
                 'name' => 'estado',
             ),
+            12 => array(
+                'required' => false,
+                'validators' => array(),
+                'filters' => array(),
+                'name' => 'patrocinado',
+            ),
         ),
         'assistec\\V2\\Rest\\Cidade\\Validator' => array(
             0 => array(
