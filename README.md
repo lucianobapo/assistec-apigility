@@ -1,6 +1,9 @@
 Apigility Skeleton Application
 ==============================
 
+ssh luciano_bapo@assistec.ilhanet.com
+
+
 php public/index.php development enable
 php -S 0.0.0.0:8888 -ddisplay_errors=0 -t public public/index.php
 rsync -rvztPhe "ssh -p 9922 -oHostKeyAlgorithms=+ssh-dss" vendor/ guiaassistenciatecnica.com@guiaassistenciatecnica-com.umbler.net:vendor

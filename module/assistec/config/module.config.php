@@ -988,6 +988,7 @@ return array(
                 'validators' => array(),
                 'filters' => array(),
                 'name' => 'patrocinado',
+                'allow_empty' => true,
             ),
         ),
         'assistec\\V2\\Rest\\Cidade\\Validator' => array(
