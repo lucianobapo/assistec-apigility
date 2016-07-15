@@ -16,7 +16,7 @@ return array(
          /**
           * Set the list of HTTP verbs.
           */
-          'allowed_methods' => array('GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'),
+          'allowed_methods' => array('GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'),
 //          'allowed_methods' => array('GET'),
 
          /**
