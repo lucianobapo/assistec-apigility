@@ -985,10 +985,24 @@ return array(
             ),
             12 => array(
                 'required' => false,
-                'validators' => array(),
-                'filters' => array(),
-                'name' => 'patrocinado',
-                'allow_empty' => true,
+                'validators' => array(
+                    0 => array(
+                        'name' => 'Zend\\Validator\\StringLength',
+                        'options' => array(
+                            'max' => '50',
+                            'min' => '1',
+                        ),
+                    ),
+                ),
+                'filters' => array(
+                    0 => array(
+                        'name' => 'Zend\\Filter\\StringTrim',
+                    ),
+                    1 => array(
+                        'name' => 'Zend\\Filter\\StripTags',
+                    ),
+                ),
+                'name' => 'perfil',
             ),
         ),
         'assistec\\V2\\Rest\\Cidade\\Validator' => array(
