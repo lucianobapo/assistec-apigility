@@ -21,7 +21,8 @@ return array(
     'ZF\\Rest',
     'ZF\\Rpc',
     'ZF\\Versioning',
-    'assistec',
-    'StatusLib',
+    17 => 'StatusLib',
     'ZfrCors',
+    'assistecApi',
+    'assistecTesteApi',
 );
