@@ -20,8 +20,11 @@ class CidadeController extends AbstractActionController
 
     public function cidadeAction()
     {
+        $params = $this->getEvent()->getRouteMatch()->getParam('params');
+        $where = '';
+        if (!is_null($params)) $where = "WHERE estado LIKE '".$params."' ";
         $query = $this->mapper
-            ->query('select distinct cidade, estado from servico order by cidade');
+            ->query('select distinct cidade, estado from servico '.$where.'order by cidade');
         $result = $query
             ->execute();
         if ($result instanceof ResultInterface && $result->isQueryResult()) {

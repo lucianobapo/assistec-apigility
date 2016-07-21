@@ -14,7 +14,7 @@ return array(
             'assistec-api.rpc.cidade' => array(
                 'type' => 'Segment',
                 'options' => array(
-                    'route' => '/cidade',
+                    'route' => '/cidade[/:params]',
                     'defaults' => array(
                         'controller' => 'assistecApi\\V1\\Rpc\\Cidade\\Controller',
                         'action' => 'cidade',
