@@ -94,6 +94,7 @@ return array(
             'assistecApi\\V1\\Rest\\Servico\\Controller' => array(
                 0 => 'application/vnd.assistec-api.v1+json',
                 1 => 'application/json',
+                2 => 'multipart/form-data',
             ),
             'assistecApi\\V1\\Rpc\\Cidade\\Controller' => array(
                 0 => 'application/vnd.assistec-api.v1+json',
@@ -184,19 +185,6 @@ return array(
                 ),
             ),
             2 => array(
-                'name' => 'cidade_id',
-                'required' => true,
-                'filters' => array(
-                    0 => array(
-                        'name' => 'Zend\\Filter\\StripTags',
-                    ),
-                    1 => array(
-                        'name' => 'Zend\\Filter\\Digits',
-                    ),
-                ),
-                'validators' => array(),
-            ),
-            3 => array(
                 'name' => 'bairro',
                 'required' => false,
                 'filters' => array(
@@ -217,7 +205,7 @@ return array(
                     ),
                 ),
             ),
-            4 => array(
+            3 => array(
                 'name' => 'endereco',
                 'required' => false,
                 'filters' => array(
@@ -238,7 +226,7 @@ return array(
                     ),
                 ),
             ),
-            5 => array(
+            4 => array(
                 'name' => 'complemento',
                 'required' => false,
                 'filters' => array(
@@ -259,7 +247,7 @@ return array(
                     ),
                 ),
             ),
-            6 => array(
+            5 => array(
                 'name' => 'cep',
                 'required' => false,
                 'filters' => array(
@@ -280,7 +268,7 @@ return array(
                     ),
                 ),
             ),
-            7 => array(
+            6 => array(
                 'name' => 'telefone',
                 'required' => false,
                 'filters' => array(
@@ -301,7 +289,7 @@ return array(
                     ),
                 ),
             ),
-            8 => array(
+            7 => array(
                 'name' => 'email',
                 'required' => false,
                 'filters' => array(
@@ -322,7 +310,7 @@ return array(
                     ),
                 ),
             ),
-            9 => array(
+            8 => array(
                 'name' => 'site',
                 'required' => false,
                 'filters' => array(
@@ -343,7 +331,7 @@ return array(
                     ),
                 ),
             ),
-            10 => array(
+            9 => array(
                 'name' => 'fabricantes',
                 'required' => false,
                 'filters' => array(
@@ -364,7 +352,7 @@ return array(
                     ),
                 ),
             ),
-            11 => array(
+            10 => array(
                 'name' => 'cidade',
                 'required' => false,
                 'filters' => array(
@@ -385,18 +373,89 @@ return array(
                     ),
                 ),
             ),
-            12 => array(
-                'name' => 'patrocinado',
+            11 => array(
                 'required' => false,
-                'filters' => array(
+                'validators' => array(
                     0 => array(
-                        'name' => 'Zend\\Filter\\StripTags',
-                    ),
-                    1 => array(
-                        'name' => 'Zend\\Filter\\Digits',
+                        'name' => 'Zend\\Validator\\StringLength',
+                        'options' => array(
+                            'max' => '50',
+                            'min' => '1',
+                        ),
                     ),
                 ),
-                'validators' => array(),
+                'filters' => array(
+                    0 => array(
+                        'name' => 'Zend\\Filter\\StringTrim',
+                    ),
+                    1 => array(
+                        'name' => 'Zend\\Filter\\StripTags',
+                    ),
+                ),
+                'name' => 'perfil',
+            ),
+            12 => array(
+                'required' => false,
+                'validators' => array(
+                    0 => array(
+                        'name' => 'Zend\\Validator\\StringLength',
+                        'options' => array(
+                            'max' => '128',
+                            'min' => '1',
+                        ),
+                    ),
+                ),
+                'filters' => array(
+                    0 => array(
+                        'name' => 'Zend\\Filter\\StringTrim',
+                    ),
+                    1 => array(
+                        'name' => 'Zend\\Filter\\StripTags',
+                    ),
+                ),
+                'name' => 'estado',
+            ),
+            13 => array(
+                'required' => false,
+                'validators' => array(
+                    0 => array(
+                        'name' => 'Zend\\Validator\\StringLength',
+                        'options' => array(
+                            'max' => '255',
+                            'min' => '1',
+                        ),
+                    ),
+                ),
+                'filters' => array(
+                    0 => array(
+                        'name' => 'Zend\\Filter\\StringTrim',
+                    ),
+                    1 => array(
+                        'name' => 'Zend\\Filter\\StripTags',
+                    ),
+                ),
+                'name' => 'fotoCapa',
+            ),
+            14 => array(
+                'required' => false,
+                'validators' => array(
+                    0 => array(
+                        'name' => 'Zend\\Validator\\StringLength',
+                        'options' => array(
+                            'max' => '255',
+                            'min' => '1',
+                        ),
+                    ),
+                ),
+                'filters' => array(
+                    0 => array(
+                        'name' => 'Zend\\Filter\\StringTrim',
+                    ),
+                    1 => array(
+                        'name' => 'Zend\\Filter\\StripTags',
+                    ),
+                ),
+                'name' => 'fotoLogo',
             ),
         ),
     ),

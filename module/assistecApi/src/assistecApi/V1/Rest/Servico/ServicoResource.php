@@ -7,6 +7,7 @@ use Zend\Paginator\Adapter\DbTableGateway as TableGatewayPaginator;
 
 class ServicoResource extends DbConnectedResource
 {
+
     /**
      * Fetch all or a subset of resources
      *
