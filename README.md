@@ -3,6 +3,9 @@ Apigility Skeleton Application
 
 ssh luciano_bapo@assistec.ilhanet.com
 
+ssh guiaassistenciat@216.172.172.178 -p2222 -i /home/luciano/.ssh/id_rsa  -o 'IdentitiesOnly yes'
+
+rsync -rvztPhe "ssh -p2222 -i /home/luciano/.ssh/id_rsa  -o 'IdentitiesOnly yes'" config/autoload/global.php guiaassistenciat@216.172.172.178:public_html/assistec-apigility/config/autoload/global.php
 
 php public/index.php development enable
 php -S 0.0.0.0:8888 -ddisplay_errors=0 -t public public/index.php

@@ -4,11 +4,11 @@ return array(
         'adapters' => array(
             'assistec-backend' => array(
                 'charset' => 'utf8',
-                'database' => 'assistec-backend',
+                'database' => 'guiaassi_assistec',
                 'driver' => 'PDO_Mysql',
                 'hostname' => 'localhost',
-                'username' => 'assistec-backend',
-                'password' => 'assistec-backend',
+                'username' => 'assiste',
+                'password' => 'assistec',
                 'driver_options' => array(
                     'buffer_results' => true,
                 ),
