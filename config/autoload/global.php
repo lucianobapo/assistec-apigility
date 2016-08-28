@@ -7,7 +7,7 @@ return array(
                 'database' => 'guiaassi_assistec',
                 'driver' => 'PDO_Mysql',
                 'hostname' => 'localhost',
-                'username' => 'assiste',
+                'username' => 'guiaassi_assiste',
                 'password' => 'assistec',
                 'driver_options' => array(
                     'buffer_results' => true,
