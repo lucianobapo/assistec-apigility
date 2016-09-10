@@ -60,7 +60,7 @@ return array(
                 0 => 'order',
                 1 => 'where',
             ),
-            'page_size' => '50',
+            'page_size' => '100',
             'page_size_param' => null,
             'entity_class' => 'assistecApi\\V1\\Rest\\Servico\\ServicoEntity',
             'collection_class' => 'assistecApi\\V1\\Rest\\Servico\\ServicoCollection',
