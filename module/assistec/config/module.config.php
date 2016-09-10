@@ -114,7 +114,7 @@ return array(
                 6 => 'sort',
                 7 => 'filter',
             ),
-            'page_size' => '25',
+            'page_size' => '50',
             'page_size_param' => '',
             'entity_class' => 'assistec\\V1\\Rest\\Servico\\ServicoEntity',
             'collection_class' => 'assistec\\V1\\Rest\\Servico\\ServicoCollection',

@@ -1,7 +1,11 @@
 Apigility Skeleton Application
 ==============================
 
-ssh luciano_bapo@assistec.ilhanet.com
+ssh 104.197.251.61
+
+rsync -rvztPhe ssh data/assistec-backend.sql 104.197.251.61:code/assistec-apigility/data/assistec-backend.sql
+rsync -rvztPhe ssh config/autoload/local.php 104.197.251.61:code/assistec-apigility/config/autoload/local.php
+rsync -rvztPhe ssh config/autoload/local.php 104.197.217.129:code/assistec-apigility/config/autoload/local.php
 
 ssh guiaassistenciat@216.172.172.178 -p2222 -i /home/luciano/.ssh/id_rsa  -o 'IdentitiesOnly yes'
 
