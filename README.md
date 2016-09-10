@@ -2,6 +2,7 @@ Apigility Skeleton Application
 ==============================
 
 ssh 104.197.251.61
+ssh app.guiaassistenciatecnica.com
 
 rsync -rvztPhe ssh data/assistec-backend.sql 104.197.251.61:code/assistec-apigility/data/assistec-backend.sql
 rsync -rvztPhe ssh config/autoload/local.php 104.197.251.61:code/assistec-apigility/config/autoload/local.php
